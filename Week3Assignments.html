@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        Week 3 Assignment - Jeremiah Moreno
+        <script>
+            //Problem 1.
+                let ages = [3, 9, 23, 64, 2, 8, 29, 93]
+                //a.
+                ageDiff = (ages[ages.length-1] - ages[0]);
+                console.log(ageDiff);
+                //b.
+                ages.push(45);
+                ageDiff = (ages[ages.length-1] - ages[0]);
+                console.log(ageDiff);
+                //c.
+                let i = 0;
+                let sumAges = 0;
+                for(i = 0; i <= ages.length-1; i++)
+                {
+                    sumAges = sumAges + ages[i];
+                }
+                let averageAge = (sumAges / ages.length);
+                console.log("The average age is " + averageAge + " years.");
+
+
+            //Problem 2.
+                let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']
+                //a.
+                let k =0;
+                let nameSum = 0
+                for(k = 0; k < names.length; k++)
+                {
+                    nameSum = nameSum + (names[k].length);
+                }console.log("The average number of letters per name is " + nameSum / names.length);
+                //b.
+                let nameTogether = ""
+                for(let m = 0; m < names.length; m++)
+                {
+                    nameTogether = nameTogether + names[m] + " ";
+                }
+                console.log(nameTogether);
+
+
+            //Problem 3.
+            /* To access the last element of an array use
+            arrayName[arrayName.length -1] */
+            console.log(names[names.length-1]);
+
+
+            //Problem 4.
+            /* to access the first element of an arry use
+            arrayName[0] */
+            console.log(names[0]);
+
+
+            //Problem 5.
+                let namesLengths = []
+                for(let q = 0; q < names.length; q++)
+                {
+                    namesLengths.push(names[q].length);
+                }
+                console.log(namesLengths);
+
+
+            //Problem 6.
+                let sumNamesLengths = 0
+                for(let p = 0; p < namesLengths.length; p++)
+                {
+                    sumNamesLengths = sumNamesLengths + namesLengths[p];
+                }
+                console.log("The sum of the name lengths is " + sumNamesLengths);
+
+
+            //Problem 7.
+                function repeats(word, n)
+                {
+                    let wordy = word
+                    for(let r = 1; r < n; r++)
+                    {
+                        wordy = wordy + word
+                    }
+                    return(wordy);
+                }let printFunction = repeats("Hello", 3);
+                console.log(printFunction);
+
+
+            //Problem 8.
+                function createFullName (firstName, lastName)
+                {
+                    return(firstName + " " + lastName);
+                }let printFullName = createFullName("Jeremiah", "Moreno");
+                console.log(printFullName);
+
+
+            //Problem 9.
+            let array1 = [];
+            function numberSumOver100(array1)
+            {
+                let numSum = 0
+                for(let s = 0; s < array1.length; s++)
+                {
+                    numSum = numSum + array1[s];
+                }
+                if(numSum > 100)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }let finalSum = numberSumOver100([45, 8, 3, 50]);
+            console.log(finalSum);
+
+
+            //Problem 10.
+            let array2 = [];
+            function avarageOfElements(array2)
+            {
+                let numSum2 = 0
+                for(let t = 0; t < array2.length; t++)
+                {
+                    numSum2 = numSum2 + array2[t];
+                }let average = numSum2/(array2.length);
+                return(average);
+            }let finalAverage = avarageOfElements([50, 75, 75, 50]);
+            console.log("The average of the elements in the array is " + finalAverage);
+
+
+            //Problem 11.
+            let array3 = [];
+            let array4 = [];
+            function greaterArray(array3, array4)
+            {
+                let numSum3 = 0
+                for(let u = 0; u < array3.length; u++)
+                {
+                    numSum3 = numSum3 + array3[u];
+                }let average3 = numSum3/(array3.length);
+
+                let numSum4 = 0
+                for(let v = 0; v < array4.length; v++)
+                {
+                    numSum4 = numSum4 + array4[v];
+                }let average4 = numSum4/(array4.length);
+
+                if((average3) > (average4))
+                {
+                    return true;
+                }else
+                    {
+                        return false;
+                    }
+            }let averageResult = greaterArray([5,5,,5,5,5], [3,3,1000,3,3,]);
+            console.log(averageResult);
+
+
+            //Problem12.
+            function willBuyDrink(isHotOutside, moneyInPocket)
+            {
+                if(isHotOutside && moneyInPocket > 10.50)
+                {
+                    return true;
+                }else
+                {
+                    return false;
+                }
+            }let canBuyDrink = willBuyDrink(false, 30);
+            console.log(canBuyDrink);
+            if(canBuyDrink)
+            {
+                console.log("I can buy a drink!");
+            }else
+            {
+                console.log("No drink for me today.");
+            }
+
+
+            //Problem 13.
+            /*This funtion converts the dose of Lisinopril to an
+            equivalent dose of Losartan. If the converted dose of
+            Lisinopril would exceed the maximum dose of Losartan,
+            a message appears.*/
+            function lisinoprilDose(lisinoprilMg)
+            {
+             let doseARB = lisinoprilMg * 5;
+             return (doseARB);
+            }let losartanMg = lisinoprilDose(80);
+            if(losartanMg <= 100) 
+            {
+                console.log("The equivalent dose of Losartan is " + losartanMg + " mg QDay.")
+            }else
+                {
+                    console.log("The equivalent dose of Losartan exceeds the maxiumum daily dose of 100 mg.")
+                }
+
+        </script>
+    </body>
+</html>
